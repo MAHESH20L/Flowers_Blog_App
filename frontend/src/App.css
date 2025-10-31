@@ -1,0 +1,312 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%, #b2f1da 100%, #e7affc 100%);
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #4a148c;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  background-color: #6a1b9a;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+nav a:hover {
+  background-color: #8e24aa;
+}
+/* Floating Icon */
+.floating-icon {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #0077b5;
+  color: white;
+  font-size: 24px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+.floating-icon:hover {
+  background-color: #005582;
+}
+/* Flash Blog Card Style */
+.flash-blog-card {
+  width: 96vw;
+  max-width: 1200px;
+  margin: 36px auto;
+  background: linear-gradient(100deg, #fffcea 75%, #fbeffd 100%);
+  border-radius: 24px;
+  box-shadow: 0 6px 24px 0 rgba(76, 72, 168, 0.14);
+  padding: 42px 50px;
+  transition: box-shadow 0.18s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 260px;
+}
+.flash-blog-card:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #d81b60 40%, #b492fb 100%);
+  border-radius: 0 0 24px 24px;
+  margin-top: 16px;
+}
+.flash-blog-card h2 {
+  color: #d81b60;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 2.5px solid #f06292;
+  padding-bottom: 8px;
+  width: 100%;
+}
+.flash-blog-card ul {
+  padding-left: 32px;
+}
+.flash-blog-card li {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+.flash-blog-card img {
+  max-width: 380px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 3px 15px rgba(99,99,153,0.09);
+}
+.flash-blog-card p,
+.flash-blog-card strong {
+  font-size: 1.22rem;
+  margin-bottom: 12px;
+}
+.flash-blog-card small {
+  font-size: 1rem;
+  color: #666;
+}
+/* Main Sections (if you use <section> for static content) */
+section {
+  max-width: 850px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+h2 {
+  color: #d81b60;
+  border-bottom: 2px solid #f06292;
+  padding-bottom: 6px;
+}
+ul {
+  padding-left: 20px;
+}
+ul li {
+  margin-bottom: 10px;
+}
+a {
+  color: #1565c0;
+}
+a:hover {
+  color: #0d47a1;
+}
+/* Data Visualization Wrapper */
+.dataviz-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #4753c7 10%, #9e70ef 40%, #d4b7fa 80%, #b6efdc 100%);
+  display: flex;
+  flex-direction: column;
+}
+/* Header inside dataviz */
+.dataviz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem 1rem 2rem;
+  background: transparent;
+}
+.dataviz-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-icon {
+  background: #1a2cc7;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+}
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #232345;
+  letter-spacing: 0.03em;
+}
+/* Upload Button */
+.upload-btn {
+  background: #296ef2;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: 1.5rem;
+  transition: background 0.2s;
+}
+.upload-btn:hover {
+  background: #1241a3;
+}
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.icon-moon,
+.icon-user {
+  font-size: 1.6rem;
+  color: #38386a;
+}
+/* Buttons */
+.primary-btn.highlight {
+  border: 2px solid #f39c12;
+  box-shadow: 0 0 8px #f39c12;
+}
+.primary-btn:disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}
+/* Hover effect on disabled buttons */
+.primary-btn:disabled:hover {
+  opacity: 1;
+  box-shadow: 0 0 8px #3498db;
+  transition: box-shadow 0.3s ease;
+}
+/* Main Content Area */
+.dataviz-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  text-align: center;
+}
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #f9fafc;
+  margin-bottom: 28px;
+  margin-top: 36px;
+  text-shadow: 0 2px 12px #5c4e8f44;
+}
+.main-desc {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #f3f3fa;
+  margin-bottom: 50px;
+  text-shadow: 0 1px 6px #4e5ec822;
+  max-width: 650px;
+}
+.main-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.primary-btn, .secondary-btn {
+  padding: 18px 42px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.primary-btn {
+  background: #256efb;
+  color: #fff;
+  box-shadow: 0 3px 12px #2a3ca377;
+}
+.primary-btn:hover {
+  background: #1641a3;
+}
+.secondary-btn {
+  background: #f6f6fbcc;
+  color: #1c2f94;
+  border: 1.5px solid #c5c6e5;
+  box-shadow: 0 2px 10px #c8c7e177;
+}
+.secondary-btn:hover {
+  background: #cbcfffcc;
+}
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+  .flash-blog-card {
+    width: 99vw;
+    max-width: 99vw;
+    padding: 18px 3vw;
+    border-radius: 16px;
+    min-height: 120px;
+  }
+  .flash-blog-card h2 {
+    font-size: 1.2rem;
+    padding-bottom: 3px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html, body {
+    width: 1024px;
+    overflow-x: auto;
+  }
+  nav a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .main-title {
+    font-size: 2.3rem;
+  }
+  .main-desc {
+    font-size: 1.1rem;
+  }
+  .dataviz-header {
+    padding: 1rem 1.5rem;
+  }
+  .primary-btn, .secondary-btn {
+    padding: 13px 20px;
+    font-size: 1rem;
+  }
+}
